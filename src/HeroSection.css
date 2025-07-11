@@ -5,10 +5,18 @@
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 142
 */
 
-.hero-section {
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110vw;
+  height: 99vh;
   background-color: #172c3e;
-  width: 100vw;
-  height: 100vh;
+  background-size: cover;
+  transform: rotate(-3deg);
+  transform-origin: bottom left;
+  z-index: -1;
 }
 /* navbar elements */
 .navbar {
@@ -33,14 +41,10 @@
 
 /* icons */
 .page-icon {
-  fill: #228be6;
+  fill: #1972c1;
 }
 .right-arrow {
-  fill: #228be6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  fill: #1972c1;
 }
 
 .down-arrow {
@@ -69,9 +73,9 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #adb5bd;
+  color: #e3e3e3;
   transition: color 0.3s ease;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: color 0.3s ease;
@@ -88,10 +92,175 @@
   font-size: 16px;
   font-weight: 500;
   color: #adb5bd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+
   gap: 5px;
+  position: relative;
+  padding: 5px 0;
 }
 
-/* resource dropdown */
+/* right arrow hovering effect */
+.request-nav-link svg {
+  padding-right: 10px;
+  width: 28px;
+  transition: transform 0.3s ease;
+}
+
+.request-nav-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* resource drop-down*/
+
+.resource-dropdown {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 80px 20px 20px;
+  border-radius: 5px;
+  position: absolute;
+  right: -1rem;
+  top: 1.7rem;
+}
+.drop-link:link,
+.drop-link:visited {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #495057;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.drop-link:hover,
+.drop-link:active {
+  color: #228be6;
+}
+
+.resource-nav-link .resource-dropdown {
+  display: none;
+}
+.resource-nav-link:hover .resource-dropdown {
+  display: flex;
+  animation: shade-In 0.2s linear;
+}
+@keyframes shade-In {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Hero content part */
+.hero-img {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+.hero-img::before {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 500px;
+  height: 400%;
+  border: 2px solid #adb5bd;
+  z-index: 0;
+}
+
+.hero-content {
+  margin: 0 9rem;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  min-width: 1000px;
+}
+
+.hero-left {
+  padding: 0rem 2rem;
+  margin-right: 3.5rem;
+}
+
+.hero-heading {
+  font-size: 4.5rem;
+  font-family: "Playfair Display ", serif;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.hero-para {
+  font-size: 1.25rem;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  color: #adb5bd;
+  margin-bottom: 2rem;
+  padding-right: 20px;
+}
+.hero-left-anchor {
+  display: flex;
+
+  gap: 1.25rem;
+}
+/* hero request link */
+.hero-request-nav-link:link,
+.hero-request-nav-link:visited {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  background-color: #1972c1;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.hero-request-nav-link:hover,
+.hero-request-nav-link:active {
+  background-color: #0e53f3;
+}
+
+/* hero request right arrow */
+.hero-request-nav-link svg {
+  padding-right: 10px;
+  width: 28px;
+  transition: transform 0.3s ease;
+  fill: #adb5bd;
+}
+
+.hero-request-nav-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* hero product nav link */
+.hero-product-nav-link:link,
+.hero-product-nav-link:visited {
+  display: flex;
+  align-items: center;
+  background-color: #495057;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.hero-product-nav-link:hover,
+.hero-product-nav-link:active {
+  background-color: #213d56;
+}

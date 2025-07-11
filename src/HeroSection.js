@@ -33,7 +33,7 @@ function HeroSection() {
             Wall of Love
           </a>
           <a href="#" className="resource-nav-link">
-            Resources
+            Resources{" "}
             <svg
               viewBox="0 0 12 12"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,12 +60,12 @@ function HeroSection() {
             Sign in
           </a>
           <a href="#" className="request-nav-link">
-            Request Demo{" "}
+            Request Demo
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="18px"
+              height="24px"
               viewBox="0 -960 960 960"
-              width="18px"
+              width="16px"
               fill="#1f1f1f"
             >
               <path
@@ -76,6 +76,38 @@ function HeroSection() {
           </a>
         </div>
       </nav>
+      <div className="hero-content">
+        <div className="hero-left">
+          <h1 className="hero-heading">Create stunning web experiences</h1>
+          <p className="hero-para">
+            Our landing page template works on all devices, so you only have to
+            set it up once, and get beautiful results forever.
+          </p>
+          <div className="hero-left-anchor">
+            <a href="#" className="hero-request-nav-link">
+              Request Demo
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="16px"
+                fill="#1f1f1f"
+              >
+                <path
+                  className="hero-right-arrow"
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                />
+              </svg>
+            </a>
+            <a href="#" className="hero-product-nav-link">
+              Explore Product&nbsp;
+            </a>
+          </div>
+        </div>
+        <div className="hero-right">
+          <img className="hero-img" src="/images/hero-img.jpeg"></img>
+        </div>
+      </div>
     </div>
   );
 }
