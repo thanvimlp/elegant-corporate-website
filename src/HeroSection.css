@@ -5,6 +5,9 @@
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 142
 */
 
+/*============================
+  HERO SECTION BACKGROUND
+============================*/
 .hero-section::before {
   content: "";
   position: absolute;
@@ -18,7 +21,10 @@
   transform-origin: bottom left;
   z-index: -1;
 }
-/* navbar elements */
+
+/*============================
+  NAVBAR
+============================*/
 .navbar {
   margin: 0 9rem;
   padding: 2rem;
@@ -26,12 +32,7 @@
   justify-content: space-between;
 }
 
-.navbar-left-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
+.navbar-left-items,
 .navbar-right-items {
   display: flex;
   justify-content: center;
@@ -39,10 +40,10 @@
   gap: 2rem;
 }
 
-/* icons */
-.page-icon {
-  fill: #1972c1;
-}
+/*============================
+  ICONS
+============================*/
+.page-icon,
 .right-arrow {
   fill: #1972c1;
 }
@@ -51,7 +52,9 @@
   fill: #adb5bd;
 }
 
-/* nav-links */
+/*============================
+  NAV LINKS
+============================*/
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
@@ -74,17 +77,34 @@
   font-size: 16px;
   font-weight: 500;
   color: #e3e3e3;
-  transition: color 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: color 0.3s ease;
 }
+
 .request-nav-link:hover,
 .request-nav-link:active {
   color: white;
 }
 
+/*============================
+  REQUEST DEMO RIGHT ARROW IN NAVBAR
+============================*/
+.request-nav-link svg {
+  padding-right: 10px;
+  width: 28px;
+  transition: transform 0.3s ease;
+  fill: #adb5bd;
+}
+
+.request-nav-link:hover svg {
+  transform: translateX(3px);
+}
+
+/*============================
+  RESOURCE LINK & DROPDOWN
+============================*/
 .resource-nav-link:link,
 .resource-nav-link:visited {
   text-decoration: none;
@@ -93,24 +113,10 @@
   font-weight: 500;
   color: #adb5bd;
   display: block;
-
   gap: 5px;
   position: relative;
   padding: 5px 0;
 }
-
-/* right arrow hovering effect */
-.request-nav-link svg {
-  padding-right: 10px;
-  width: 28px;
-  transition: transform 0.3s ease;
-}
-
-.request-nav-link:hover svg {
-  transform: translateX(3px);
-}
-
-/* resource drop-down*/
 
 .resource-dropdown {
   background-color: white;
@@ -123,6 +129,16 @@
   right: -1rem;
   top: 1.7rem;
 }
+
+.resource-nav-link .resource-dropdown {
+  display: none;
+}
+
+.resource-nav-link:hover .resource-dropdown {
+  display: flex;
+  animation: shade-In 0.2s linear;
+}
+
 .drop-link:link,
 .drop-link:visited {
   align-self: flex-start;
@@ -133,18 +149,12 @@
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .drop-link:hover,
 .drop-link:active {
   color: #228be6;
 }
 
-.resource-nav-link .resource-dropdown {
-  display: none;
-}
-.resource-nav-link:hover .resource-dropdown {
-  display: flex;
-  animation: shade-In 0.2s linear;
-}
 @keyframes shade-In {
   0% {
     transform: translateY(-10px);
@@ -156,24 +166,11 @@
   }
 }
 
-/* Hero content part */
-.hero-img {
-  position: relative;
-  width: 500px;
-  height: 400px;
-}
-.hero-img::before {
-  content: " ";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 500px;
-  height: 400%;
-  border: 2px solid #adb5bd;
-  z-index: 0;
-}
-
+/*============================
+  HERO CONTENT
+============================*/
 .hero-content {
+  width: 1150px;
   margin: 0 9rem;
   padding-top: 5rem;
   display: flex;
@@ -190,13 +187,14 @@
 }
 
 .hero-heading {
-  font-size: 4.5rem;
-  font-family: "Playfair Display ", serif;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   color: white;
   text-align: left;
   margin-bottom: 1rem;
 }
+
 .hero-para {
   font-size: 1.25rem;
   text-align: left;
@@ -205,12 +203,37 @@
   margin-bottom: 2rem;
   padding-right: 20px;
 }
+
 .hero-left-anchor {
   display: flex;
-
   gap: 1.25rem;
 }
-/* hero request link */
+
+/*============================
+  HERO RIGHT IMAGE
+============================*/
+.hero-right {
+  position: relative;
+}
+
+.hero-img {
+  width: 500px;
+  height: 400px;
+}
+
+.background-border {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 490px;
+  height: 390px;
+  border: 2px solid #adb5bd8a;
+  z-index: -1;
+}
+
+/*============================
+  HERO BUTTONS
+============================*/
 .hero-request-nav-link:link,
 .hero-request-nav-link:visited {
   text-decoration: none;
@@ -218,21 +241,20 @@
   font-size: 16px;
   font-weight: 500;
   color: white;
-  transition: background-color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
   background-color: #1972c1;
   padding: 10px 20px;
   border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .hero-request-nav-link:hover,
 .hero-request-nav-link:active {
   background-color: #0e53f3;
 }
 
-/* hero request right arrow */
 .hero-request-nav-link svg {
   padding-right: 10px;
   width: 28px;
@@ -244,7 +266,6 @@
   transform: translateX(3px);
 }
 
-/* hero product nav link */
 .hero-product-nav-link:link,
 .hero-product-nav-link:visited {
   display: flex;
@@ -263,4 +284,29 @@
 .hero-product-nav-link:hover,
 .hero-product-nav-link:active {
   background-color: #213d56;
+}
+
+/*============================
+  OVERLAY PLAY BUTTON
+============================*/
+.overlay-button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 160px;
+  left: 210px;
+  background-color: rgba(255, 255, 255, 0.707);
+  transition: background-color 0.2s ease;
+}
+
+.overlay-button:hover {
+  background-color: white;
+}
+
+.play {
+  fill: #0e53f3;
+  height: 2rem;
+  width: 2rem;
 }
