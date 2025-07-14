@@ -179,13 +179,25 @@
   flex-wrap: nowrap;
   gap: 2rem;
   min-width: 1000px;
+  margin-bottom: 9rem;
 }
 
 .hero-left {
   padding: 0rem 2rem;
   margin-right: 3.5rem;
+  animation: left-hero-Shade-In 0.3s linear;
 }
 
+@keyframes left-hero-Shade-In {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .hero-heading {
   font-size: 4rem;
   font-family: "Playfair Display", serif;
@@ -214,6 +226,18 @@
 ============================*/
 .hero-right {
   position: relative;
+  animation: right-hero-Shade-In 0.3s linear;
+}
+
+@keyframes right-hero-Shade-In {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .hero-img {
@@ -309,4 +333,17 @@
   fill: #0e53f3;
   height: 2rem;
   width: 2rem;
+}
+
+/*============================
+  MEDIA QUERY
+============================*/
+@media (max-width: 768px) {
+  /* tablets */
+}
+@media (max-width: 480px) {
+  /* mobile phones */
+}
+@media (min-width: 1024px) {
+  /* desktops */
 }

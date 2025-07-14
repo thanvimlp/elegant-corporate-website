@@ -1,0 +1,52 @@
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* - Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 142
+*/
+
+.feature-wrapper {
+  margin: 12rem 9rem 5rem 9rem;
+  width: 71rem;
+  padding: 1rem;
+}
+
+.icon-circle {
+  width: 4rem;
+  height: 4rem;
+  background-color: #006fd1;
+  border-radius: 50%;
+}
+
+.feature-icon {
+  fill: white;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.feature-grid-cell h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.feature-grid-cell p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  color: #6f6f6f;
+  text-align: left;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5rem;
+  column-gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
